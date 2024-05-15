@@ -13,4 +13,7 @@ public:
 
 private:
     Ui::BankSoftwareClass ui;
+
+private slots:
+    void exit_button_clicked();
 };
