@@ -13,4 +13,8 @@ public:
 
 private:
 	Ui::NewClientSignUpClass ui;
+
+private slots:
+	void sp_exit_button_clicked();
+	void home_page_button_clicked();
 };
