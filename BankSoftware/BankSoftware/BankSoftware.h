@@ -20,5 +20,6 @@ private:
 private slots:
     void exit_button_clicked();
     void login_clock();
+	void signup_button_clicked();
 };
 
