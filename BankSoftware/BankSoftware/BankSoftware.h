@@ -2,6 +2,8 @@
 
 #include <QtWidgets/QMainWindow>
 #include "ui_BankSoftware.h"
+#include <QTimer> 
+
 
 class BankSoftware : public QMainWindow
 {
@@ -13,7 +15,10 @@ public:
 
 private:
     Ui::BankSoftwareClass ui;
+	QTimer* timer;
 
 private slots:
     void exit_button_clicked();
+    void login_clock();
 };
+
