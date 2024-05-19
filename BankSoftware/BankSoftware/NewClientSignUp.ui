@@ -91,7 +91,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Nr rachunku </string>
+     <string>Nr rachunku:</string>
     </property>
    </widget>
    <widget class="QLabel" name="time_display_3">
