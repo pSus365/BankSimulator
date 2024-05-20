@@ -1,6 +1,9 @@
 #include "BankSoftware.h"
 #include "NewClientSignUp.h"
+#include "MainPageLogIn.h"
 #include <QtWidgets/QApplication>
+
+
 
 int main(int argc, char *argv[])
 {
