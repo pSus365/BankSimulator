@@ -17,21 +17,249 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>310</x>
-      <y>200</y>
-      <width>331</width>
-      <height>101</height>
+      <x>180</x>
+      <y>150</y>
+      <width>171</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Arial Black</family>
-      <pointsize>20</pointsize>
+      <pointsize>14</pointsize>
       <bold>true</bold>
      </font>
     </property>
     <property name="text">
-     <string>Witaj Nowy Kliencie!</string>
+     <string>Imię:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>210</y>
+      <width>171</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+      <pointsize>14</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Nazwisko:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>270</y>
+      <width>171</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+      <pointsize>14</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Saldo (PLN):</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>330</y>
+      <width>171</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+      <pointsize>14</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Nr rachunku:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="time_display_3">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>131</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+      <pointsize>36</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>P$M</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_new_imie">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>160</y>
+      <width>341</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Courier New</family>
+      <pointsize>14</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_new_nazwisko">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>220</y>
+      <width>341</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Courier New</family>
+      <pointsize>14</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_slado">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>280</y>
+      <width>341</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Courier New</family>
+      <pointsize>14</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_nr_rach">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>340</y>
+      <width>341</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Courier New</family>
+      <pointsize>14</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="home_page_button">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>480</y>
+      <width>151</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+      <pointsize>10</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>↩ Strona główna</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="sp_exit_button">
+    <property name="geometry">
+     <rect>
+      <x>790</x>
+      <y>480</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+      <pointsize>10</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Wyjdź</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_sp_hello">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>80</y>
+      <width>301</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+      <pointsize>16</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Kreator konta bankowego</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="confirm_new_client_button">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>400</y>
+      <width>151</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+      <pointsize>10</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Potwierdzam dane</string>
     </property>
    </widget>
   </widget>
@@ -57,5 +285,42 @@
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>sp_exit_button</sender>
+   <signal>clicked()</signal>
+   <receiver>NewClientSignUpClass</receiver>
+   <slot>sp_exit_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>845</x>
+     <y>533</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>462</x>
+     <y>284</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>home_page_button</sender>
+   <signal>clicked()</signal>
+   <receiver>NewClientSignUpClass</receiver>
+   <slot>home_page_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>695</x>
+     <y>532</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>462</x>
+     <y>284</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>sp_exit_button_clicked()</slot>
+  <slot>home_page_button_clicked()</slot>
+ </slots>
 </ui>
