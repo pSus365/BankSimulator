@@ -92,16 +92,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="MainPageLogIn.cpp" />
     <ClCompile Include="NewClientSignUp.cpp" />
     <QtRcc Include="BankSoftware.qrc" />
     <QtUic Include="BankSoftware.ui" />
     <QtMoc Include="BankSoftware.h" />
     <ClCompile Include="BankSoftware.cpp" />
     <ClCompile Include="main.cpp" />
+    <QtUic Include="MainPageLogIn.ui" />
     <QtUic Include="NewClientSignUp.ui" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="NewClientSignUp.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="MainPageLogIn.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

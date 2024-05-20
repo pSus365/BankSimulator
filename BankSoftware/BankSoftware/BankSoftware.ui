@@ -74,7 +74,7 @@
      <string>Numer rachunku:</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="user_lineEdit">
+   <widget class="QLineEdit" name="line_edit_account_number">
     <property name="geometry">
      <rect>
       <x>350</x>
@@ -94,7 +94,7 @@
      <bool>false</bool>
     </property>
    </widget>
-   <widget class="QLineEdit" name="pwd_lineEdit">
+   <widget class="QLineEdit" name="line_edit_password">
     <property name="geometry">
      <rect>
       <x>350</x>
@@ -235,7 +235,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>10</y>
+      <y>20</y>
       <width>131</width>
       <height>61</height>
      </rect>
@@ -309,9 +309,26 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>log_button</sender>
+   <signal>clicked()</signal>
+   <receiver>BankSoftwareClass</receiver>
+   <slot>login_button_clicke()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>485</x>
+     <y>363</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>461</x>
+     <y>280</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>exit_button_clicked()</slot>
   <slot>signup_button_clicked()</slot>
+  <slot>login_button_clicke()</slot>
  </slots>
 </ui>
