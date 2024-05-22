@@ -92,13 +92,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AccessAccepted.cpp" />
+    <ClCompile Include="GeneratePassword.cpp" />
     <ClCompile Include="MainPageLogIn.cpp" />
     <ClCompile Include="NewClientSignUp.cpp" />
     <QtRcc Include="BankSoftware.qrc" />
+    <QtUic Include="AccessAccepted.ui" />
     <QtUic Include="BankSoftware.ui" />
     <QtMoc Include="BankSoftware.h" />
     <ClCompile Include="BankSoftware.cpp" />
     <ClCompile Include="main.cpp" />
+    <QtUic Include="GeneratePassword.ui" />
     <QtUic Include="MainPageLogIn.ui" />
     <QtUic Include="NewClientSignUp.ui" />
   </ItemGroup>
@@ -107,6 +111,12 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="MainPageLogIn.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="AccessAccepted.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="GeneratePassword.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

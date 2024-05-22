@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>925</width>
+    <width>924</width>
     <height>569</height>
    </rect>
   </property>
@@ -91,7 +91,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Nr rachunku:</string>
+     <string>Hasło:</string>
     </property>
    </widget>
    <widget class="QLabel" name="time_display_3">
@@ -114,7 +114,7 @@
      <string>P$M</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_new_imie">
+   <widget class="QLineEdit" name="lineEdit_name">
     <property name="geometry">
      <rect>
       <x>410</x>
@@ -131,7 +131,7 @@
      </font>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_new_nazwisko">
+   <widget class="QLineEdit" name="lineEdit_surname">
     <property name="geometry">
      <rect>
       <x>410</x>
@@ -148,7 +148,7 @@
      </font>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_slado">
+   <widget class="QLineEdit" name="lineEdit_balance">
     <property name="geometry">
      <rect>
       <x>410</x>
@@ -165,7 +165,7 @@
      </font>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_nr_rach">
+   <widget class="QLineEdit" name="lineEdit_password">
     <property name="geometry">
      <rect>
       <x>410</x>
@@ -262,13 +262,50 @@
      <string>Potwierdzam dane</string>
     </property>
    </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>450</y>
+      <width>181</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Generator hasła:</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="gen_password_button">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>450</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+     </font>
+    </property>
+    <property name="text">
+     <string>Generuj</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>925</width>
+     <width>924</width>
      <height>21</height>
     </rect>
    </property>
@@ -318,9 +355,43 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>confirm_new_client_button</sender>
+   <signal>clicked()</signal>
+   <receiver>NewClientSignUpClass</receiver>
+   <slot>access_accepted_greetings_pag()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>585</x>
+     <y>452</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>462</x>
+     <y>284</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>gen_password_button</sender>
+   <signal>clicked()</signal>
+   <receiver>NewClientSignUpClass</receiver>
+   <slot>generate_new_passwor()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>295</x>
+     <y>508</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>461</x>
+     <y>284</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>sp_exit_button_clicked()</slot>
   <slot>home_page_button_clicked()</slot>
+  <slot>access_accepted_greetings_pag()</slot>
+  <slot>generate_new_passwor()</slot>
  </slots>
 </ui>
