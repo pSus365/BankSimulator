@@ -46,6 +46,12 @@
     <ClCompile Include="MainPageLogIn.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="AccessAccepted.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratePassword.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="NewClientSignUp.h">
@@ -54,12 +60,24 @@
     <QtMoc Include="MainPageLogIn.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="AccessAccepted.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="GeneratePassword.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="NewClientSignUp.ui">
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="MainPageLogIn.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="AccessAccepted.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="GeneratePassword.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>
