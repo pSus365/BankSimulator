@@ -35,18 +35,18 @@ void GeneratePassword::generate_password()
     }
     else {
         std::vector<char> password;
-        std::set<char> rozneElementy;
+        std::set<char> differences;
         std::random_device rd;
         std::mt19937 gen(rd());
         std::uniform_int_distribution<> distr(97, 122);
 
-        while (rozneElementy.size() < length)
+        while (differences.size() < length)
         {
             char znak = distr(gen);
-            rozneElementy.insert(znak);
+            differences.insert(znak);
         }
 
-        std::vector<char> kopiaNaWektor(rozneElementy.begin(), rozneElementy.end());
+        std::vector<char> kopiaNaWektor(differences.begin(), differences.end());
 
         int obecnyIndex = 0;
         for (int i = 0; i < distinct; i++)
