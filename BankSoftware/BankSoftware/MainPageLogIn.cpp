@@ -15,7 +15,7 @@ MainPageLogIn::~MainPageLogIn()
 
 
 void MainPageLogIn::logout_button_clicked() {
-	QMessageBox::information(this, "Komunikat", "Wylogowano pomyœlnie!");
+	QMessageBox::information(this, "Komunikat", "Wylogowano pomyslnie!");
 	BankSoftware* mainWindow = new BankSoftware();
 	mainWindow->show();
 	this->close();

@@ -38,15 +38,21 @@ void BankSoftware::login_clock()
 
 void BankSoftware::signup_button_clicked()
 {
+
 	NewClientSignUp* new_client = new NewClientSignUp();
 	new_client->show();
 	this->close();
+
 }
 void BankSoftware::login_button_clicked()
 {
-	QString admin_account_number = ui.line_edit_account_number->text();
-	QString admin_password = ui.line_edit_password->text();
-	if (admin_account_number == "11111111" && admin_password == "tajne") {
+	QString account_number = ui.line_edit_account_number->text();
+	QString password = ui.line_edit_password->text();
+	if(account_number == "" || password == "")
+	{
+		QMessageBox::warning(this, "Error", "Prosze wypelnic oba pola!");
+	}
+	else if (account_number == "1" && password == "1") {
 		MainPageLogIn* new_client = new MainPageLogIn();
 		new_client->show();
 		this->close();
@@ -57,3 +63,5 @@ void BankSoftware::login_button_clicked()
 	}
 	
 }
+
+

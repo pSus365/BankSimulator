@@ -110,6 +110,9 @@
       <bold>true</bold>
      </font>
     </property>
+    <property name="echoMode">
+     <enum>QLineEdit::EchoMode::Password</enum>
+    </property>
    </widget>
    <widget class="QPushButton" name="log_button">
     <property name="geometry">
@@ -294,22 +297,6 @@
    </hints>
   </connection>
   <connection>
-   <sender>signup_button</sender>
-   <signal>clicked()</signal>
-   <receiver>BankSoftwareClass</receiver>
-   <slot>signup_button_clicked()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>485</x>
-     <y>482</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>461</x>
-     <y>280</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
    <sender>log_button</sender>
    <signal>clicked()</signal>
    <receiver>BankSoftwareClass</receiver>
@@ -325,10 +312,26 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>signup_button</sender>
+   <signal>clicked()</signal>
+   <receiver>BankSoftwareClass</receiver>
+   <slot>signup_button_clicke()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>485</x>
+     <y>492</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>462</x>
+     <y>284</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>exit_button_clicked()</slot>
-  <slot>signup_button_clicked()</slot>
   <slot>login_button_clicke()</slot>
+  <slot>signup_button_clicke()</slot>
  </slots>
 </ui>
