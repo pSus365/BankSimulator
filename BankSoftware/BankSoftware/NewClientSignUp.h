@@ -18,5 +18,6 @@ private slots:
 	void sp_exit_button_clicked();
 	void home_page_button_clicked();
 	void access_accepted_greetings_page();
-	void generate_new_password();
+	void generate_password();
+	void switch_mode();
 };

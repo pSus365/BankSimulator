@@ -50,7 +50,14 @@ void BankSoftware::login_button_clicked()
 	QString password = ui.line_edit_password->text();
 	if(account_number == "" || password == "")
 	{
-		QMessageBox::warning(this, "Error", "Prosze wypelnic oba pola!");
+		QMessageBox msgBox;
+		msgBox.setIcon(QMessageBox::Warning);
+		msgBox.setWindowTitle("Error");
+		msgBox.setText("Prosze wypelnic oba pola!");
+		QPushButton* okButton = msgBox.addButton(QMessageBox::Ok);
+		okButton->setStyleSheet("background-color: #d3d3d3; color: #000000;");
+		msgBox.setStyleSheet("QMessageBox { background-color: #ffffff; color: #000000; }");
+		msgBox.exec();
 	}
 	else if (account_number == "1" && password == "1") {
 		MainPageLogIn* new_client = new MainPageLogIn();
@@ -59,7 +66,15 @@ void BankSoftware::login_button_clicked()
 	}
 	else
 	{
-		QMessageBox::information(this, "Login", "Takie konto nie istnieje, kliknij zarejestruj sie aby dolaczyc do naszego banku!");
+		QMessageBox msgBox;
+		msgBox.setIcon(QMessageBox::Information);
+		msgBox.setWindowTitle("Login");
+		msgBox.setText("Takie konto nie istnieje, kliknij zarejestruj sie aby dolaczyc do naszego banku!");
+		QPushButton* okButton = msgBox.addButton(QMessageBox::Ok);
+		okButton->setStyleSheet("background-color: #d3d3d3; color: #000000;");
+		msgBox.setStyleSheet("QMessageBox { background-color: #ffffff; color: #000000; }");
+		msgBox.exec();
+
 	}
 	
 }
