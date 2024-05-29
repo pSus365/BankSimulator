@@ -15,7 +15,15 @@ MainPageLogIn::~MainPageLogIn()
 
 
 void MainPageLogIn::logout_button_clicked() {
-	QMessageBox::information(this, "Komunikat", "Wylogowano pomyslnie!");
+    QMessageBox msgBox;
+    msgBox.setIcon(QMessageBox::Information);
+    msgBox.setWindowTitle("Komunikat");
+    msgBox.setText("Wylogowano pomyslnie!");
+    QPushButton* okButton = msgBox.addButton(QMessageBox::Ok);
+    okButton->setStyleSheet("background-color: #d3d3d3; color: #000000;");
+    msgBox.setStyleSheet("QMessageBox { background-color: #ffffff; color: #000000; }");
+    msgBox.exec();
+
 	BankSoftware* mainWindow = new BankSoftware();
 	mainWindow->show();
 	this->close();

@@ -1,8 +1,10 @@
 #include "NewClientSignUp.h"
 #include "BankSoftware.h"
 #include "AccessAccepted.h"
-#include "GeneratePassword.h"
 #include <qmessagebox.h>
+#include <vector>
+#include <random>
+#include <set>
 
 NewClientSignUp::NewClientSignUp(QWidget *parent)
 	: QMainWindow(parent)
@@ -10,7 +12,10 @@ NewClientSignUp::NewClientSignUp(QWidget *parent)
 	ui.setupUi(this);
 
 	connect(ui.confirm_new_client_button, SIGNAL(clicked()), this, SLOT(access_accepted_greetings_page()));
-	connect(ui.gen_password_button, SIGNAL(clicked()), this, SLOT(generate_new_password()));
+	connect(ui.gen_password_button, SIGNAL(clicked()), this, SLOT(generate_password()));
+	connect(ui.checkBox_password, SIGNAL(stateChanged(int)), this, SLOT(switch_mode()));
+	
+
 
 }
 
@@ -40,12 +45,33 @@ void NewClientSignUp::access_accepted_greetings_page()
 	bool a = true;
 	if (name == "" || surname == "" || balance == "" || password == "") 
 	{
-		QMessageBox::warning(this, "Error", "Uzupelnij wszystkie pola!");
+		QMessageBox msgBox;
+		msgBox.setIcon(QMessageBox::Warning);
+		msgBox.setWindowTitle("Error");
+		msgBox.setText("Uzupelnij wszystkie pola!");
+		QPushButton* okButton = msgBox.addButton(QMessageBox::Ok);
+		okButton->setStyleSheet("background-color: #d3d3d3; color: #000000;");
+		msgBox.setStyleSheet("QMessageBox { background-color: #ffffff; color: #000000; }");
+		msgBox.exec();
+
+	
 		a = false;
 	}
 	if (a) 
 	{
-		QMessageBox::StandardButton reply = QMessageBox::question(this, "Potwierdzenie", "Czy dane napewno sa prawidlowo wpisane?", QMessageBox::Yes | QMessageBox::No);
+		
+		QMessageBox msgBox;
+		msgBox.setWindowTitle("Potwierdzenie");
+		msgBox.setIcon(QMessageBox::Information);
+		msgBox.setText("Czy dane napewno sa prawidlowo wpisane?");
+		QPushButton* yesButton = msgBox.addButton(QMessageBox::Yes);
+		yesButton->setStyleSheet("background-color: #d3d3d3; color: #000000;");
+		QPushButton* noButton = msgBox.addButton(QMessageBox::No);
+		noButton->setStyleSheet("background-color: #d3d3d3; color: #000000;");
+		msgBox.setStyleSheet("QMessageBox { background-color: #ffffff; color: #000000; }");
+
+	
+		QMessageBox::StandardButton reply = static_cast<QMessageBox::StandardButton>(msgBox.exec());
 
 		if (reply == QMessageBox::Yes)
 		{
@@ -53,14 +79,60 @@ void NewClientSignUp::access_accepted_greetings_page()
 			new_client->show();
 			this->close();
 		}
+		
+	//	msgBox.setStyleSheet("QMessageBox { background-color: #000000; color: #000000; }"
+		//	"QPushButton { background-color: #0000000; color: #000000; border: 2px solid #000000; }");
+
+		
 	}
 	
 	
 }
-
-void NewClientSignUp::generate_new_password()
+void NewClientSignUp::generate_password()
 {
-	GeneratePassword* new_client = new GeneratePassword();
-	new_client->show();
-	this->close();
+    int distinct = 12;
+    int length = 12;
+
+        std::vector<char> password;
+        std::vector<char> differences;
+        std::random_device rd;
+        std::mt19937 gen(rd());
+        std::uniform_int_distribution<> distr(61, 122);
+
+        while (differences.size() < length)
+        {
+            char znak = distr(gen);
+            differences.push_back(znak);
+        }
+
+        std::vector<char> kopiaNaWektor(differences.begin(), differences.end());
+
+        int obecnyIndex = 0;
+        for (int i = 0; i < distinct; i++)
+        {
+            password.push_back(kopiaNaWektor[obecnyIndex]);
+            obecnyIndex = (obecnyIndex + 1) % length;
+        }
+        QLineEdit* lineEdit_password = ui.lineEdit_password;
+        lineEdit_password->clear();
+        for (int i = 0; i < password.size(); i++)
+        {
+            QString temp;
+            temp = password[i];
+            lineEdit_password->insert(temp);
+        }
+
+
+    
+
+}
+void NewClientSignUp::switch_mode() {
+	QLineEdit* lineEditPassword = ui.lineEdit_password;
+
+	if (lineEditPassword->echoMode() == QLineEdit::Normal) {
+		lineEditPassword->setEchoMode(QLineEdit::Password);
+	}
+	else {
+		lineEditPassword->setEchoMode(QLineEdit::Normal);
+	}
 }

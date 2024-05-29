@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>NewClientSignUp</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(30, 30, 30);
+</string>
+  </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QLabel" name="label">
     <property name="geometry">
@@ -29,6 +33,9 @@
       <pointsize>14</pointsize>
       <bold>true</bold>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Imię:</string>
@@ -50,6 +57,9 @@
       <bold>true</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
     <property name="text">
      <string>Nazwisko:</string>
     </property>
@@ -69,6 +79,9 @@
       <pointsize>14</pointsize>
       <bold>true</bold>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Saldo (PLN):</string>
@@ -90,6 +103,9 @@
       <bold>true</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
     <property name="text">
      <string>Hasło:</string>
     </property>
@@ -109,6 +125,9 @@
       <pointsize>36</pointsize>
       <bold>true</bold>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>P$M</string>
@@ -130,6 +149,9 @@
       <bold>true</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_surname">
     <property name="geometry">
@@ -146,6 +168,9 @@
       <pointsize>14</pointsize>
       <bold>true</bold>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_balance">
@@ -164,6 +189,9 @@
       <bold>true</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_password">
     <property name="geometry">
@@ -181,45 +209,11 @@
       <bold>true</bold>
      </font>
     </property>
-   </widget>
-   <widget class="QPushButton" name="home_page_button">
-    <property name="geometry">
-     <rect>
-      <x>620</x>
-      <y>480</y>
-      <width>151</width>
-      <height>30</height>
-     </rect>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
-    <property name="font">
-     <font>
-      <family>Arial Black</family>
-      <pointsize>10</pointsize>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>↩ Strona główna</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="sp_exit_button">
-    <property name="geometry">
-     <rect>
-      <x>790</x>
-      <y>480</y>
-      <width>111</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Arial Black</family>
-      <pointsize>10</pointsize>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Wyjdź</string>
+    <property name="echoMode">
+     <enum>QLineEdit::EchoMode::Password</enum>
     </property>
    </widget>
    <widget class="QLabel" name="label_sp_hello">
@@ -237,6 +231,9 @@
       <pointsize>16</pointsize>
       <bold>true</bold>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Kreator konta bankowego</string>
@@ -258,46 +255,130 @@
       <bold>true</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(60, 60, 60);
+color: rgb(255, 255, 255);
+</string>
+    </property>
     <property name="text">
      <string>Potwierdzam dane</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_5">
+   <widget class="QCheckBox" name="checkBox_password">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>340</y>
+      <width>91</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Pokaz haslo</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget">
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>450</y>
-      <width>181</width>
-      <height>41</height>
+      <y>490</y>
+      <width>881</width>
+      <height>31</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <family>Arial Black</family>
-      <pointsize>14</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Generator hasła:</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="gen_password_button">
-    <property name="geometry">
-     <rect>
-      <x>240</x>
-      <y>450</y>
-      <width>111</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Arial Black</family>
-     </font>
-    </property>
-    <property name="text">
-     <string>Generuj</string>
-    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="label_5">
+       <property name="font">
+        <font>
+         <family>Arial Black</family>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>Generator hasła:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_6">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="gen_password_button">
+       <property name="font">
+        <font>
+         <family>Arial Black</family>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(60, 60, 60);
+color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>Generuj</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="home_page_button">
+       <property name="font">
+        <font>
+         <family>Arial Black</family>
+         <pointsize>10</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(60, 60, 60);
+color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>↩ Strona główna</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="sp_exit_button">
+       <property name="font">
+        <font>
+         <family>Arial Black</family>
+         <pointsize>10</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 0, 0);
+color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>Wyjdź</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
