@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>900</width>
-    <height>575</height>
+    <width>887</width>
+    <height>589</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -21,9 +21,9 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>20</y>
-      <width>181</width>
-      <height>41</height>
+      <y>0</y>
+      <width>131</width>
+      <height>71</height>
      </rect>
     </property>
     <property name="font">
@@ -62,13 +62,447 @@ background-color: rgb(255,0,0);</string>
      <string>Wyloguj się</string>
     </property>
    </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>10</y>
+      <width>451</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+      <pointsize>20</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(255, 255, 255)</string>
+    </property>
+    <property name="text">
+     <string>Witaj w panelu administratora</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>70</y>
+      <width>191</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+      <pointsize>14</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Zalogowano jako:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>120</y>
+      <width>241</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+      <pointsize>14</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Aktualne saldo konta:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>170</y>
+      <width>271</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+      <pointsize>14</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Data zalozenia rachunku:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_balance">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>120</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+      <pointsize>14</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_date">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>170</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+      <pointsize>14</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>120</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+      <pointsize>14</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Imie:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_name">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>120</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+      <pointsize>14</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_surname">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>170</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+      <pointsize>14</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>170</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+      <pointsize>14</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Nazwisko:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_date_2">
+    <property name="geometry">
+     <rect>
+      <x>740</x>
+      <y>170</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+      <pointsize>14</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(255, 255, 255)</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QTreeWidget" name="treeWidget">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>220</y>
+      <width>561</width>
+      <height>271</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(255, 255, 255);
+border-top-color: rgb(0, 0, 0);
+background-color: rgb(47, 47, 47);</string>
+    </property>
+    <column>
+     <property name="text">
+      <string>Klienci Banku:</string>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial Black</family>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="background">
+      <color>
+       <red>0</red>
+       <green>0</green>
+       <blue>0</blue>
+      </color>
+     </property>
+    </column>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>500</y>
+      <width>371</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+      <pointsize>16</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Skonsolidowane saldo klientów:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_balance_all">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>500</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+      <pointsize>16</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_internal">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>220</y>
+      <width>231</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+      <pointsize>10</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(255, 255, 255);
+background-color: rgb(60, 60, 60);</string>
+    </property>
+    <property name="text">
+     <string>Tranfser wewnętrzny</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_external">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>290</y>
+      <width>231</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+      <pointsize>10</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(255, 255, 255);
+background-color: rgb(60, 60, 60);</string>
+    </property>
+    <property name="text">
+     <string>Tranfer zwenętrzny</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_add_client">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>360</y>
+      <width>231</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+      <pointsize>10</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(255, 255, 255);
+background-color: rgb(60, 60, 60);</string>
+    </property>
+    <property name="text">
+     <string>Dodaj klienta</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_remove_client">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>430</y>
+      <width>231</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+      <pointsize>10</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(255, 255, 255);
+background-color: rgb(60, 60, 60);</string>
+    </property>
+    <property name="text">
+     <string>Usuń klienta</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>900</width>
+     <width>887</width>
      <height>21</height>
     </rect>
    </property>
@@ -102,8 +536,60 @@ background-color: rgb(255,0,0);</string>
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButton_add_client</sender>
+   <signal>clicked()</signal>
+   <receiver>MainPageLogInClass</receiver>
+   <slot>add_client_button_clicke()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>745</x>
+     <y>428</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>443</x>
+     <y>294</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_internal</sender>
+   <signal>clicked()</signal>
+   <receiver>MainPageLogInClass</receiver>
+   <slot>internal_button_clicke()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>745</x>
+     <y>288</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>443</x>
+     <y>294</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_external</sender>
+   <signal>clicked()</signal>
+   <receiver>MainPageLogInClass</receiver>
+   <slot>external_button_clicke()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>745</x>
+     <y>358</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>443</x>
+     <y>294</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>log_out_button_clicked()</slot>
+  <slot>add_client_button_clicked()</slot>
+  <slot>add_client_button_clicke()</slot>
+  <slot>internal_button_clicke()</slot>
+  <slot>external_button_clicke()</slot>
  </slots>
 </ui>

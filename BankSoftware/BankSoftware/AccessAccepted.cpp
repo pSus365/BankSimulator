@@ -26,13 +26,25 @@ void AccessAccepted::display_account_number()
 	std::mt19937 gen(rd());
 	std::uniform_int_distribution<> distr(10000000,99999999);
 	QLabel* label_account_number = ui.label_account_number;
-	for (int i = 0; i < 1; i++)
+	int iban = distr(gen); 
+	QString second_temp = QString::number(iban);
+	label_account_number->setText(second_temp);
+	QFile File("dane.txt");
+	if (File.open(QIODevice::Append | QIODevice::ReadWrite))
 	{
-		int num = distr(gen); 
-		bool ok;
-		QString second_temp = QString::number(num);
-		label_account_number->setText(second_temp);
-
+		QTextStream stream(&File);
+		stream << ";" << iban;
+		
 	}
+	File.close();
+	QFile secondFile("daty.txt");
+	if (secondFile.open(QIODevice::Append | QIODevice::ReadWrite))
+	{
+		QTextStream stream(&secondFile);
+		
+		stream << ";" << iban;
+	}
+	secondFile.close();
+	
 		
 }

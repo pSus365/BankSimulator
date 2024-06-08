@@ -269,9 +269,16 @@ color: rgb(255, 255, 255);
      <rect>
       <x>780</x>
       <y>340</y>
-      <width>91</width>
+      <width>111</width>
       <height>22</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+      <pointsize>10</pointsize>
+      <bold>true</bold>
+     </font>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);</string>
@@ -380,6 +387,88 @@ color: rgb(255, 255, 255);</string>
      </item>
     </layout>
    </widget>
+   <widget class="QLabel" name="label_date">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>20</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+      <pointsize>14</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(255, 255, 255)</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_time">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>20</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+      <pointsize>14</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(255, 255, 255)</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>20</y>
+      <width>91</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+      <pointsize>14</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(255, 255, 255)</string>
+    </property>
+    <property name="text">
+     <string>Kraków, </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>400</y>
+      <width>221</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -437,6 +526,22 @@ color: rgb(255, 255, 255);</string>
    </hints>
   </connection>
   <connection>
+   <sender>gen_password_button</sender>
+   <signal>clicked()</signal>
+   <receiver>NewClientSignUpClass</receiver>
+   <slot>generate_new_passwor()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>292</x>
+     <y>549</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>461</x>
+     <y>284</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
    <sender>confirm_new_client_button</sender>
    <signal>clicked()</signal>
    <receiver>NewClientSignUpClass</receiver>
@@ -445,22 +550,6 @@ color: rgb(255, 255, 255);</string>
     <hint type="sourcelabel">
      <x>585</x>
      <y>452</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>462</x>
-     <y>284</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>gen_password_button</sender>
-   <signal>clicked()</signal>
-   <receiver>NewClientSignUpClass</receiver>
-   <slot>generate_new_passwor()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>295</x>
-     <y>508</y>
     </hint>
     <hint type="destinationlabel">
      <x>461</x>
@@ -472,7 +561,7 @@ color: rgb(255, 255, 255);</string>
  <slots>
   <slot>sp_exit_button_clicked()</slot>
   <slot>home_page_button_clicked()</slot>
-  <slot>access_accepted_greetings_pag()</slot>
   <slot>generate_new_passwor()</slot>
+  <slot>access_accepted_greetings_pag()</slot>
  </slots>
 </ui>
