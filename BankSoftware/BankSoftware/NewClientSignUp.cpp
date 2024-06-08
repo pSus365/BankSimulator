@@ -2,6 +2,7 @@
 #include "BankSoftware.h"
 #include "AccessAccepted.h"
 #include <qmessagebox.h>
+#include <QDateTime>
 #include <vector>
 #include <random>
 #include <set>
@@ -10,7 +11,10 @@ NewClientSignUp::NewClientSignUp(QWidget *parent)
 	: QMainWindow(parent)
 {
 	ui.setupUi(this);
-
+	timer = new QTimer(this);
+	connect(timer, SIGNAL(timeout()), this, SLOT(login_clock()));
+	timer->start(1000);
+	//ui.label_8->setText("elo");
 	connect(ui.confirm_new_client_button, SIGNAL(clicked()), this, SLOT(access_accepted_greetings_page()));
 	connect(ui.gen_password_button, SIGNAL(clicked()), this, SLOT(generate_password()));
 	connect(ui.checkBox_password, SIGNAL(stateChanged(int)), this, SLOT(switch_mode()));
@@ -26,9 +30,26 @@ void NewClientSignUp::sp_exit_button_clicked()
 {
 	close();
 }
+void NewClientSignUp::login_clock()
+{
+	QTime actual_time = QTime::currentTime();
+	time_text = actual_time.toString("hh:mm:ss");
+	ui.label_time->setText(time_text);
+	QDate actual_date = QDate::currentDate();
+	date_text = actual_date.toString("dd.MM.yyyy");
+	ui.label_date->setText(date_text);
+}
 
 void NewClientSignUp::home_page_button_clicked()
 {
+	QMessageBox msgBox;
+	msgBox.setWindowTitle("Potwierdzenie");
+	msgBox.setIcon(QMessageBox::Information);
+	msgBox.setText("Sesja wygasla, aby kontynuowac zaloguj sie");
+	QPushButton* yesButton = msgBox.addButton(QMessageBox::Ok);
+	yesButton->setStyleSheet("background-color: #d3d3d3; color: #000000;");
+
+	QMessageBox::StandardButton reply = static_cast<QMessageBox::StandardButton>(msgBox.exec());
 	BankSoftware* bank_software = new BankSoftware();
 	bank_software->show();
 	this->close();
@@ -37,12 +58,32 @@ void NewClientSignUp::home_page_button_clicked()
 
 void NewClientSignUp::access_accepted_greetings_page()
 {
+	
 	QString name, surname, balance, password;
 	name = ui.lineEdit_name->text();
 	surname = ui.lineEdit_surname->text();
 	balance = ui.lineEdit_balance->text();
 	password = ui.lineEdit_password->text();
 	bool a = true;
+	QFile File("dane.txt");
+	if (File.open(QIODevice::Append | QIODevice::ReadWrite))
+	{
+		QTextStream stream(&File);
+		stream << "\n" << name;
+		stream << ";" << surname;
+		stream << ";" << balance;
+		stream << ";" << password;
+	}
+	File.close();
+	QFile File_dates("daty.txt");
+	if (File_dates.open(QIODevice::Append | QIODevice::ReadWrite))
+	{
+		QTextStream stream(&File_dates);
+		stream << "\n" << date_text;
+		stream << ";" << time_text;
+	
+	}
+	File_dates.close();
 	if (name == "" || surname == "" || balance == "" || password == "") 
 	{
 		QMessageBox msgBox;
@@ -97,7 +138,7 @@ void NewClientSignUp::generate_password()
         std::vector<char> differences;
         std::random_device rd;
         std::mt19937 gen(rd());
-        std::uniform_int_distribution<> distr(61, 122);
+        std::uniform_int_distribution<> distr(65, 122);
 
         while (differences.size() < length)
         {

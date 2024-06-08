@@ -1,6 +1,10 @@
 #pragma once
 
 #include <QMainWindow>
+#include <QDir>
+#include <QDebug>
+#include <QString>
+#include <QTextStream>
 #include "ui_NewClientSignUp.h"
 
 class NewClientSignUp : public QMainWindow
@@ -13,6 +17,9 @@ public:
 
 private:
 	Ui::NewClientSignUpClass ui;
+	QTimer* timer;
+	QString date_text;
+	QString time_text;
 
 private slots:
 	void sp_exit_button_clicked();
@@ -20,4 +27,5 @@ private slots:
 	void access_accepted_greetings_page();
 	void generate_password();
 	void switch_mode();
+	void login_clock();
 };

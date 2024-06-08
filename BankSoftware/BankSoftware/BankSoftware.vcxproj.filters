@@ -49,6 +49,12 @@
     <ClCompile Include="AccessAccepted.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="InternalTransfer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ExternalTransfer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="NewClientSignUp.h">
@@ -60,6 +66,12 @@
     <QtMoc Include="AccessAccepted.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="InternalTransfer.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="ExternalTransfer.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="NewClientSignUp.ui">
@@ -69,6 +81,12 @@
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="AccessAccepted.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="InternalTransfer.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="ExternalTransfer.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>
