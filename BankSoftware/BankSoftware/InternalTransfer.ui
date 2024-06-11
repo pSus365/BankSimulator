@@ -66,10 +66,17 @@ background-color: rgb(255,0,0);</string>
     <property name="geometry">
      <rect>
       <x>200</x>
-      <y>310</y>
+      <y>320</y>
       <width>251</width>
       <height>41</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+      <pointsize>10</pointsize>
+      <bold>true</bold>
+     </font>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);
@@ -83,7 +90,7 @@ background-color: rgb(60, 60, 60);</string>
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>90</y>
+      <y>100</y>
       <width>211</width>
       <height>31</height>
      </rect>
@@ -129,7 +136,7 @@ background-color: rgb(60, 60, 60);</string>
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>240</y>
+      <y>250</y>
       <width>211</width>
       <height>31</height>
      </rect>
@@ -152,7 +159,7 @@ background-color: rgb(60, 60, 60);</string>
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>190</y>
+      <y>200</y>
       <width>211</width>
       <height>31</height>
      </rect>
@@ -175,7 +182,7 @@ background-color: rgb(60, 60, 60);</string>
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>140</y>
+      <y>150</y>
       <width>221</width>
       <height>31</height>
      </rect>
@@ -194,44 +201,56 @@ background-color: rgb(60, 60, 60);</string>
      <string>IBAN konta docelowego:</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="lineEdit_iban_from">
     <property name="geometry">
      <rect>
       <x>310</x>
-      <y>93</y>
+      <y>103</y>
       <width>251</width>
       <height>31</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(255, 255, 255)</string>
+    </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_2">
+   <widget class="QLineEdit" name="lineEdit_iban_to">
     <property name="geometry">
      <rect>
       <x>310</x>
-      <y>140</y>
+      <y>150</y>
       <width>251</width>
       <height>31</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(255, 255, 255)</string>
+    </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_3">
+   <widget class="QLineEdit" name="lineEdit_price">
     <property name="geometry">
      <rect>
       <x>310</x>
-      <y>190</y>
+      <y>200</y>
       <width>251</width>
       <height>31</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(255, 255, 255)</string>
+    </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_4">
+   <widget class="QLineEdit" name="lineEdit_password">
     <property name="geometry">
      <rect>
       <x>310</x>
-      <y>240</y>
+      <y>250</y>
       <width>251</width>
       <height>31</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(255, 255, 255)</string>
     </property>
    </widget>
   </widget>
@@ -257,5 +276,25 @@ background-color: rgb(60, 60, 60);</string>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>log_out_button</sender>
+   <signal>clicked()</signal>
+   <receiver>InternalTransferClass</receiver>
+   <slot>log_out_button_clicke()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>570</x>
+     <y>413</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>321</x>
+     <y>216</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>log_out_button_clicke()</slot>
+ </slots>
 </ui>

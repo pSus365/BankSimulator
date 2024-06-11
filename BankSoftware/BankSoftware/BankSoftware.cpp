@@ -127,13 +127,13 @@ void BankSoftware::login_button_clicked()
 		name = "admin";
 		surname = "admin";
 		balance = "111111";
-		MainPageLogIn* new_client = new MainPageLogIn(account_number,name,surname,balance);
+		MainPageLogIn* new_client = new MainPageLogIn(account_number,name,surname,balance,password);
 		new_client->show();
 		this->close();
 	}
 	else if (a) {
 		QString iban = ui.line_edit_account_number->text();
-		MainPageLogIn* new_client = new MainPageLogIn(iban,name, surname,balance);
+		MainPageLogIn* new_client = new MainPageLogIn(iban,name, surname,balance,password);
 		new_client->show();
 		this->close();
 	}

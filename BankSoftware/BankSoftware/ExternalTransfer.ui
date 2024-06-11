@@ -17,7 +17,7 @@
    <string notr="true">background-color: rgb(30, 30, 30);</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QLineEdit" name="lineEdit_2">
+   <widget class="QLineEdit" name="lineEdit_swift">
     <property name="geometry">
      <rect>
       <x>280</x>
@@ -53,7 +53,7 @@
      <string>Kod SWIFT/BIC odbiorcy:</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_3">
+   <widget class="QLineEdit" name="lineEdit_price">
     <property name="geometry">
      <rect>
       <x>280</x>
@@ -66,7 +66,7 @@
      <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_4">
+   <widget class="QLineEdit" name="lineEdit_password">
     <property name="geometry">
      <rect>
       <x>280</x>
@@ -79,7 +79,7 @@
      <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="lineEdit_iban">
     <property name="geometry">
      <rect>
       <x>280</x>
@@ -192,6 +192,12 @@ background-color: rgb(255,0,0);</string>
       <height>41</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(60, 60, 60);</string>
@@ -269,5 +275,25 @@ background-color: rgb(60, 60, 60);</string>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>pushButton_external</sender>
+   <signal>clicked()</signal>
+   <receiver>ExternalTransferClass</receiver>
+   <slot>confirm_transfer_clicke()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>295</x>
+     <y>378</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>304</x>
+     <y>221</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>confirm_transfer_clicke()</slot>
+ </slots>
 </ui>
