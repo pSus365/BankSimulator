@@ -102,8 +102,11 @@ void DeleteAccount::delete_account(){
 					}
 
 					QTextStream out(&outFile);
-					for (const QString& line : lines) {
-						out << line << "\n";
+					for (int i = 0; i < lines.size(); ++i) {
+						out << lines[i];
+						if (i != lines.size() - 1) {
+							out << "\n";
+						}
 					}
 					outFile.close();
 
@@ -183,8 +186,11 @@ void DeleteAccount::delete_date(QString iban_to_delete) {
 	}
 
 	QTextStream out(&outFile);
-	for (const QString& line : lines) {
-		out << line << "\n";
+	for (int i = 0; i < lines.size(); ++i) {
+		out << lines[i];
+		if (i != lines.size() - 1) {
+			out << "\n";
+		}
 	}
 	outFile.close();
 
