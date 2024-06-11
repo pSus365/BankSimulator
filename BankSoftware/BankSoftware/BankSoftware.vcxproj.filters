@@ -55,6 +55,9 @@
     <ClCompile Include="ExternalTransfer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="DeleteAccount.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="NewClientSignUp.h">
@@ -72,6 +75,9 @@
     <QtMoc Include="ExternalTransfer.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="DeleteAccount.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="NewClientSignUp.ui">
@@ -87,6 +93,9 @@
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="ExternalTransfer.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="DeleteAccount.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>
